@@ -11,6 +11,8 @@
     "node": ">=10.0.0"
   },
   "scripts": {
+    "docker:db:down": "docker-compose down",
+    "docker:db:up": "docker-compose up -d db",
     "dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
     "build": "cross-env NODE_ENV=production keystone build",
     "start": "cross-env NODE_ENV=production keystone start",
