@@ -1,0 +1,156 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;
+
+/* ----------- FONTS ---------------------- */
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&family=Roboto+Slab:wght@400;700&display=swap");
+
+  @font-face {
+    font-family: "Rising Moon";
+    font-weight: 500;
+    src: url("/fonts/rising-moon/RisingMoon-Regular01.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Tropiline";
+    font-weight: 800;
+    src: url("/fonts/tropiline/tropiline-extrabold-webfont.woff") format("woff"),
+      url("/fonts/tropiline/tropiline-extrabold-webfont.woff2") format("woff2");
+  }
+}
+
+/* ----------- TAGS ---------------------- */
+h1 {
+  @apply font-display text-4xl font-bold;
+}
+
+h2,
+h3 {
+  @apply font-sans text-sm uppercase tracking-wide;
+}
+
+@screen md {
+  h1 {
+    @apply text-6xl;
+  }
+}
+
+p {
+  @apply font-serif font-normal;
+}
+
+label {
+  @apply block uppercase font-bold text-xs font-sans;
+}
+
+/* ----------- FORMS ---------------------- */
+button {
+  @apply text-4xl text-center;
+}
+
+input[type="email"],
+input[type="text"] {
+  @apply bg-gray-200 font-serif p-2 w-full outline-none;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus {
+  @apply outline-none shadow-outline;
+}
+
+.number {
+  @apply text-center mx-1 h-20;
+}
+
+.number.error {
+  @apply border-red-700 border-solid bg-red-200 border-2;
+}
+
+.submit {
+  @apply bg-primary shadow-md h-10 font-handwriting text-7xl px-10 outline-none inline-block;
+}
+
+.submit:hover {
+  @apply bg-secondary;
+}
+
+.submit span {
+  @apply relative -top-4;
+}
+
+/* ----------- COMPONENTS ---------------------- */
+.body {
+  @apply mb-8;
+}
+
+.box {
+  @apply mx-auto relative bg-white px-4 py-16 shadow-xl mb-8;
+}
+
+@screen md {
+  .box {
+    @apply p-10;
+  }
+}
+
+.footer {
+  @apply flex-1;
+}
+
+.error {
+  @apply font-sans font-bold text-red-600;
+}
+
+/* answers */
+.answer {
+  @apply rounded-full flex items-center justify-center w-16 h-16 uppercase font-sans font-bold tracking-wide text-center text-xs leading-none border-solid border-4 border-black px-2 mx-1 outline-none;
+}
+
+.answer:focus {
+  @apply outline-none;
+}
+
+.answer:hover {
+  @apply bg-primary;
+}
+
+.answer.disabled:hover {
+  @apply bg-transparent cursor-default;
+}
+
+/* enneagram diagram */
+.circle {
+  @apply fill-gray;
+}
+
+.number {
+  @apply fill-white;
+}
+
+.result-1 .circle-1,
+.result-2 .circle-2,
+.result-3 .circle-3,
+.result-4 .circle-4,
+.result-5 .circle-5,
+.result-6 .circle-6,
+.result-7 .circle-7,
+.result-8 .circle-8,
+.result-9 .circle-9 {
+  @apply fill-primary;
+}
+
+.result-1 .number-1,
+.result-2 .number-2,
+.result-3 .number-3,
+.result-4 .number-4,
+.result-5 .number-5,
+.result-6 .number-6,
+.result-7 .number-7,
+.result-8 .number-8,
+.result-9 .number-9 {
+  @apply fill-black;
+}
